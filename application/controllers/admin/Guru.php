@@ -9,7 +9,8 @@
         }
 
         public function index() {
-            $this->template->load('admin/view/v_admin', 'admin/guru/table_guru');
+            $data['dataGuru'] = $this->M_guru->readGuru()->result();
+            $this->template->load('admin/view/v_admin', 'admin/guru/table_guru', $data);
         }
 
         public function formAdd() {
@@ -44,7 +45,7 @@
             $this->M_guru->insertGuru($data);
             if ($this->db->affected_rows() > 0) {
                 // $this->session->set_flashdata('flash', 'tambah');
-                redirect('admin/guru/table_guru');
+                redirect('admin/guru');
               }
               else {
                 redirect('admin/guru/form_add');

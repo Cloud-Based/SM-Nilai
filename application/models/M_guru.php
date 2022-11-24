@@ -8,7 +8,7 @@ class M_guru extends CI_Model {
   }
 
   public function readGuru() {
-    $q = $this->db->get('tbl_jenismenu');
+    $q = $this->db->get('tb_guru');
     return $q;
   }
 
@@ -18,10 +18,10 @@ class M_guru extends CI_Model {
 
   public function updateGuru($data, $id) {
     $this->db->where('id', $id);
-    $this->db->update('tbl_jenismenu', $data);
+    $this->db->update('tb_guru', $data);
   }
 
   public function deleteGuru($id){
-    $this->db->delete('tbl_jenismenu', $id);
+    $this->db->delete('tb_guru', $id);
   }
 }
