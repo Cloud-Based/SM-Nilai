@@ -1,11 +1,11 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Data Mata Pelajaran</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Tabel Mata Pelajaran</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -21,21 +21,8 @@
             <div class="col-12">
               <div class="card recent-sales">
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
                 <div class="card-body">
-                  <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Tabel Data Mata Pelajaran</h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -76,7 +63,7 @@
           <!-- Tambah mapel dan pengampu -->
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Custom Styled Validation</h5>
+              <h5 class="card-title">Tambah Mata Pelajaran</h5>
               <p>Form tambah mata pelajaran</p>
 
               <!-- Mapel -->
@@ -98,7 +85,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Custom Styled Validation</h5>
+              <h5 class="card-title">Tambah Pengampu</h5>
               <p>Form tambah guru pengampu</p>
 
               <!-- Pengampu -->

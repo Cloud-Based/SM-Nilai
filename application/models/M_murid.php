@@ -12,6 +12,11 @@ class M_murid extends CI_Model {
     return $q;
   }
 
+  public function readTotalMurid() {
+    $q = $this->db->get('tb_murid');
+    return $q->num_rows();
+  }
+
   public function insertMurid($data) {
       $this->db->insert('tb_murid', $data);
   }

@@ -21,29 +21,15 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
                 <div class="card-body">
-                  <h5 class="card-title">Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Guru</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-cart"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6><?= $totalGuru; ?></h6>
 
                     </div>
                   </div>
@@ -56,29 +42,15 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
                 <div class="card-body">
-                  <h5 class="card-title">Revenue <span>| This Month</span></h5>
+                  <h5 class="card-title">Murid</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>$3,264</h6>
-                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6><?= $totalMurid; ?></h6>
 
                     </div>
                   </div>
@@ -92,29 +64,15 @@
 
               <div class="card info-card customers-card">
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
                 <div class="card-body">
-                  <h5 class="card-title">Customers <span>| This Year</span></h5>
+                  <h5 class="card-title">Mata Pelajaran</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
-                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+                      <h6><?= $totalMapel; ?></h6>
 
                     </div>
                   </div>
@@ -130,59 +88,36 @@
 
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Datatables</h5>
-                      <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+                      <h5 class="card-title">Tabel Data Guru</h5>
 
-                      <!-- Table with stripped rows -->
+                      <!-- Tabel Guru -->
                       <table class="table datatable">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Start Date</th>
+                            <th scope="col">NIP</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Tempat, tanggal lahir</th>
+                            <th scope="col">No. HP</th>
+                            <th scope="col">Alamat</th>
+                            <th scope="col">Jenis Kelamin</th>
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $i=1; foreach ($dataGuru as $item) { ?>
                           <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
+                            <th scope="row"><?= $i++; ?></th>
+                            <td><?= $item->nip; ?></td>
+                            <td><?= $item->nama; ?></td>
+                            <td><?= $item->tempat_lahir.", ".$item->tgl_lahir; ?></td>
+                            <td><?= $item->no_hp; ?></td>
+                            <td><?= $item->alamat; ?></td>
+                            <td><?= $item->jenis_kelamin; ?></td>
                           </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Bridie Kessler</td>
-                            <td>Developer</td>
-                            <td>35</td>
-                            <td>2014-12-05</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Ashleigh Langosh</td>
-                            <td>Finance</td>
-                            <td>45</td>
-                            <td>2011-08-12</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>Angus Grady</td>
-                            <td>HR</td>
-                            <td>34</td>
-                            <td>2012-06-11</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td>Raheem Lehner</td>
-                            <td>Dynamic Division Officer</td>
-                            <td>47</td>
-                            <td>2011-04-19</td>
-                          </tr>
+                          <?php } ?>
                         </tbody>
                       </table>
-                      <!-- End Table with stripped rows -->
+                      <!-- End Tabel Guru -->
 
                     </div>
                   </div>
@@ -197,59 +132,34 @@
 
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Datatables</h5>
-                      <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+                      <h5 class="card-title">Tabel Data Murid</h5>
 
-                      <!-- Table with stripped rows -->
+                      <!-- Tabel Murid -->
                       <table class="table datatable">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Position</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Start Date</th>
+                            <th scope="col">NIP</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Tempat, tanggal lahir</th>
+                            <th scope="col">Alamat</th>
+                            <th scope="col">Jenis Kelamin</th>
                           </tr>
                         </thead>
                         <tbody>
+                          <?php $i=1; foreach ($dataMurid as $item) { ?>
                           <tr>
-                            <th scope="row">1</th>
-                            <td>Brandon Jacob</td>
-                            <td>Designer</td>
-                            <td>28</td>
-                            <td>2016-05-25</td>
+                            <th scope="row"><?= $i++; ?></th>
+                            <td><?= $item->nisn; ?></td>
+                            <td><?= $item->nama_murid; ?></td>
+                            <td><?= $item->tempat_lahir.", ".$item->tgl_lahir; ?></td>
+                            <td><?= $item->alamat; ?></td>
+                            <td><?= $item->jenis_kelamin; ?></td>
                           </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Bridie Kessler</td>
-                            <td>Developer</td>
-                            <td>35</td>
-                            <td>2014-12-05</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td>Ashleigh Langosh</td>
-                            <td>Finance</td>
-                            <td>45</td>
-                            <td>2011-08-12</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">4</th>
-                            <td>Angus Grady</td>
-                            <td>HR</td>
-                            <td>34</td>
-                            <td>2012-06-11</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">5</th>
-                            <td>Raheem Lehner</td>
-                            <td>Dynamic Division Officer</td>
-                            <td>47</td>
-                            <td>2011-04-19</td>
-                          </tr>
+                          <?php } ?>
                         </tbody>
                       </table>
-                      <!-- End Table with stripped rows -->
+                      <!-- End Tabel Murid -->
 
                     </div>
                   </div>
@@ -269,56 +179,23 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Datatables</h5>
-              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+              <h5 class="card-title">Tabel Data Mata Pelajaran</h5>
 
               <!-- Table with stripped rows -->
-              <table class="table datatable">
+              <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
+                    <th scope="col">Kode</th>
+                    <th scope="col">Mata Pelajaran</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td>35</td>
-                    <td>2014-12-05</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td>45</td>
-                    <td>2011-08-12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td>34</td>
-                    <td>2012-06-11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td>47</td>
-                    <td>2011-04-19</td>
-                  </tr>
+                  <?php foreach ($dataMapel as $item) { ?>
+                    <tr>
+                      <th scope="row"><?= $item->id; ?></th>
+                      <td><?= $item->mata_pelajaran; ?></td>
+                    </tr>
+                  <?php } ?>
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->

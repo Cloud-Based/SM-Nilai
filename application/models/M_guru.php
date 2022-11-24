@@ -11,6 +11,11 @@ class M_guru extends CI_Model {
     $q = $this->db->get('tb_guru');
     return $q;
   }
+  
+  public function readTotalGuru() {
+    $q = $this->db->get('tb_guru');
+    return $q->num_rows();
+  }
 
   public function insertGuru($data) {
       $this->db->insert('tb_guru', $data);

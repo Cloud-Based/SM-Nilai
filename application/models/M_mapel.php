@@ -22,6 +22,11 @@ class M_mapel extends CI_Model {
     return $q;
   }
 
+  public function readTotalMapel() {
+    $q = $this->db->get('tb_mapel');
+    return $q->num_rows();
+  }
+
   public function insertMapel($data) {
       $this->db->insert('tb_mapel', $data);
   }

@@ -1,11 +1,11 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Data Guru</h1>
+      <h1>Data Murid</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Tabel Guru</li>
+          <li class="breadcrumb-item active">Tabel Murid</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -21,13 +21,13 @@
             <div class="col-12">
               <div class="card top-selling">
                 <div class="card-body pb-0">
-                  <h5 class="card-title">Tabel Guru <span>| <a class="btn btn-primary" href="<?= site_url('admin/murid/formadd'); ?>">Tambah</a></span></h5>
+                  <h5 class="card-title">Tabel Murid <span>| <a class="btn btn-primary" href="<?= site_url('admin/murid/formadd'); ?>">Tambah</a></span></h5>
 
                   <table class="table datatable">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">NIP</th>
+                    <th scope="col">NISN</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Tempat, tanggal lahir</th>
                     <th scope="col">Alamat</th>
