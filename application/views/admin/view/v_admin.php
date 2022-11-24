@@ -274,7 +274,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="<?= site_url('dashboard'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -283,7 +283,14 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="<?= site_url('admin/guru'); ?>">
           <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
+          <span>Guru</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="<?= site_url('admin/murid'); ?>">
+          <i class="bi bi-file-earmark"></i>
+          <span>Murid</span>
         </a>
       </li><!-- End Blank Page Nav -->
 
