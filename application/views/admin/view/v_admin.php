@@ -285,14 +285,21 @@
           <i class="bi bi-file-earmark"></i>
           <span>Guru</span>
         </a>
-      </li><!-- End Blank Page Nav -->
+      </li><!-- End Guru Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="<?= site_url('admin/murid'); ?>">
           <i class="bi bi-file-earmark"></i>
           <span>Murid</span>
         </a>
-      </li><!-- End Blank Page Nav -->
+      </li><!-- End Murid Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="<?= site_url('admin/mapel'); ?>">
+          <i class="bi bi-file-earmark"></i>
+          <span>Mata Pelajaran</span>
+        </a>
+      </li><!-- End Mata Pelajaran Page Nav -->
 
     </ul>
 
