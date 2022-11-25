@@ -17,8 +17,22 @@ class M_guru extends CI_Model {
     return $q->num_rows();
   }
 
+  public function readMapelByIdGuru($id) {
+    $q = $this->db->query("SELECT tb_guru.id as id_guru, tb_mapel.id as id_guru_mapel, tb_mapel.mata_pelajaran as mata_pelajaran
+    FROM tb_guru JOIN tb_guru_mapel
+    ON tb_guru.id = tb_guru_mapel.id_guru JOIN tb_mapel
+    ON tb_guru_mapel.id_mapel = tb_mapel.id
+    WHERE tb_guru_mapel.id_guru = '$id'");
+
+    return $q;
+  }
+
   public function insertGuru($data) {
       $this->db->insert('tb_guru', $data);
+  }
+
+  public function insertNilaiBatch($data) {
+    $this->db->insert_batch('tb_nilai', $data);
   }
 
   public function updateGuru($data, $id) {
