@@ -11,7 +11,9 @@
         }
 
         public function index() {
-            $id = "gu8035";
+            $id = $this->session->userdata('id');
+            $data['guruById'] = $this->M_guru->get_id($id);
+            $data['role'] = $this->M_guru->get_role($id);
             $data['dataMurid'] = $this->M_murid->readMurid()->result();
             $data['dataMapel'] = $this->M_mapel->readMapel()->result();
             $data['dataMapelByIdGuru'] = $this->M_guru->readMapelByIdGuru($id)->result();

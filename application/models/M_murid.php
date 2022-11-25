@@ -49,4 +49,18 @@ class M_murid extends CI_Model {
   public function deleteMurid($id){
     $this->db->delete('tb_murid', $id);
   }
+
+  public function get_id($id) {
+    $q = $this->db->get_where('tb_murid', array('id' => $id));
+    return $q->row_object();
+  }
+
+  public function get_role($id) {
+    $q = $this->db->query("SELECT tb_murid.id, tb_role.role
+    FROM tb_murid JOIN tb_role
+    ON tb_murid.role = tb_role.id
+    WHERE tb_murid.id = '$id'");
+
+    return $q->row_object();
+  }
 }

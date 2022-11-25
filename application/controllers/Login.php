@@ -82,4 +82,9 @@
                 redirect('login');
             }
         }
+
+        public function act_logout(){
+            $this->session->sess_destroy();
+            redirect('login');
+          }
     }

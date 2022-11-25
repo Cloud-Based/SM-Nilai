@@ -43,4 +43,18 @@ class M_guru extends CI_Model {
   public function deleteGuru($id){
     $this->db->delete('tb_guru', $id);
   }
+
+  public function get_id($id) {
+    $q = $this->db->get_where('tb_guru', array('id' => $id));
+    return $q->row_object();
+  }
+
+  public function get_role($id) {
+    $q = $this->db->query("SELECT tb_guru.id, tb_role.role
+    FROM tb_guru JOIN tb_role
+    ON tb_guru.role = tb_role.id
+    WHERE tb_guru.id = '$id'");
+
+    return $q->row_object();
+  }
 }

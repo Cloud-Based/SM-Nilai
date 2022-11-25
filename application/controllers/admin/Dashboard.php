@@ -8,9 +8,13 @@
           $this->load->model('M_mapel');
           $this->load->model('M_guru');
           $this->load->model('M_murid');
+          $this->load->model('M_login');
         }
 
         public function index() {
+            $id = $this->session->userdata('id');
+            $data['admin'] = $this->M_login->get_id($id);
+            $data['role'] = $this->M_login->get_role($id);
             $data['dataMapel'] = $this->M_mapel->readMapel()->result();
             $data['dataGuru'] = $this->M_guru->readGuru()->result();
             $data['totalGuru'] = $this->M_guru->readTotalGuru();
