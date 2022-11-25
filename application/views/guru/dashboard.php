@@ -19,7 +19,7 @@
               <h5 class="card-title">Datatables</h5>
 
               <!-- Table with stripped rows -->
-              <form class="row g-3" method="post" action="<?= site_url('dashboard/act_nilai'); ?>">
+              <form class="row g-3" method="post" action="<?= site_url('guru/dashboard/act_nilai'); ?>">
                 <input type="hidden" value="gu8035" name="idGuru">
                 <div class="col-md-2">
                   <label for="validationCustom05" class="form-label">Mata Pelajaran</label>
@@ -73,7 +73,7 @@
               <h5 class="card-title"><?= $val->mata_pelajaran; ?></h5>
 
               <!-- Table with stripped rows -->
-              <form class="row g-3" method="post" action="<?= site_url('dashboard/act_nilai'); ?>">
+              <form class="row g-3" method="post" action="<?= site_url('guru/dashboard/act_nilai'); ?>">
                 <input type="hidden" value="gu8035" name="idGuru">
                 <table class="table datatable" id="tabelNilai">
                   <thead>

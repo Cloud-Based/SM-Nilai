@@ -89,7 +89,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="<?= site_url('dashboard'); ?>">
+        <a class="nav-link " href="<?= site_url('murid/dashboard'); ?>">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>

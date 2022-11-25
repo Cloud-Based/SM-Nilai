@@ -44,10 +44,10 @@
             $this->M_guru->insertNilaiBatch($result);
             if ($this->db->affected_rows() > 0) {
                 // $this->session->set_flashdata('flash', 'tambah');
-                redirect('dashboard');
+                redirect('guru/dashboard');
               }
               else {
-                redirect('dashboard');
+                redirect('guru/dashboard');
               }
         }
     }
