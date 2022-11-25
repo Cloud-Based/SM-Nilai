@@ -57,4 +57,13 @@ class M_guru extends CI_Model {
 
     return $q->row_object();
   }
+
+  public function getNilai($id) {
+    $q = $this->db->query("SELECT tb_murid.id as id_murid
+    FROM tb_murid JOIN tb_nilai
+    ON tb_murid.id = tb_nilai.id_murid
+    WHERE tb_nilai.id_murid = '$id'");
+    
+    return $q;
+  }
 }

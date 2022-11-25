@@ -42,7 +42,6 @@
 
             $this->M_murid->insertMurid($data);
             if ($this->db->affected_rows() > 0) {
-                // $this->session->set_flashdata('flash', 'tambah');
                 redirect('admin/murid');
               }
               else {

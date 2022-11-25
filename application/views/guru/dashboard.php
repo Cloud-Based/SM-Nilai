@@ -20,7 +20,7 @@
 
               <!-- Table with stripped rows -->
               <form class="row g-3" method="post" action="<?= site_url('guru/dashboard/act_nilai'); ?>">
-                <input type="hidden" value="gu8035" name="idGuru">
+                <input type="hidden" value="<?= $guruById->id; ?>" name="idGuru">
                 <div class="col-md-2">
                   <label for="validationCustom05" class="form-label">Mata Pelajaran</label>
                   <select class="form-select" name="mapelNilai" id="mataPelajaran" required>
@@ -44,7 +44,7 @@
                   </thead>
                   <tbody>
                   <?php $i=1; foreach ($dataMurid as $item) { ?>
-                    <tr>
+                      <tr>
                       <th scope="row"><?= $i++; ?></th>
                       <td class="col-4"><?= $item->nisn; ?></td>
                       <td class="col-6"><?= $item->nama_murid; ?></td>
@@ -54,10 +54,9 @@
                           <input type="text" class="form-control" name="nilai[]" value="">
                         </div>
                       </td>
-                    </tr>
+                    </tr>                    
                   <?php } ?>
                 </table>
-                <div id="test"></div>
                 <div class="col-2">
                   <button class="btn btn-primary" type="submit">Submit Penilaian</button>
                 </div>
@@ -74,7 +73,7 @@
 
               <!-- Table with stripped rows -->
               <form class="row g-3" method="post" action="<?= site_url('guru/dashboard/act_nilai'); ?>">
-                <input type="hidden" value="gu8035" name="idGuru">
+                <input type="hidden" value="<?= $guruById->id; ?>" name="idGuru">
                 <table class="table datatable" id="tabelNilai">
                   <thead>
                     <tr>
@@ -101,10 +100,6 @@
                     <?php } ?>
                   <?php } ?>
                 </table>
-                <div id="test"></div>
-                <div class="col-2">
-                  <button class="btn btn-warning" type="submit">Upadate Penilaian</button>
-                </div>
               </form>
               <!-- End Table with stripped rows -->
 
