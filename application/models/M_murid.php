@@ -22,6 +22,16 @@ class M_murid extends CI_Model {
     return $q;
   }
 
+  public function readNilaiById($id) {
+    $q = $this->db->query("SELECT tb_mapel.id as id_mapel, tb_mapel.mata_pelajaran, tb_nilai.nilai
+    FROM tb_mapel JOIN tb_nilai
+    ON tb_mapel.id = tb_nilai.id_mapel JOIN tb_murid
+    ON tb_nilai.id_murid = tb_murid.id
+    WHERE tb_nilai.id_murid = '$id'");
+
+    return $q;
+  }
+
   public function readTotalMurid() {
     $q = $this->db->get('tb_murid');
     return $q->num_rows();

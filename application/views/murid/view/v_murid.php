@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Admin</title>
+  <title>Dashboard - Murid</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,19 +45,13 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         Dashboard
-        <span class="d-none d-lg-block">Admin</span>
+        <span class="d-none d-lg-block">Murid</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown pe-3">
 
@@ -101,27 +95,6 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= site_url('admin/guru'); ?>">
-          <i class="bi bi-file-earmark"></i>
-          <span>Guru</span>
-        </a>
-      </li><!-- End Guru Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= site_url('admin/murid'); ?>">
-          <i class="bi bi-file-earmark"></i>
-          <span>Murid</span>
-        </a>
-      </li><!-- End Murid Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?= site_url('admin/mapel'); ?>">
-          <i class="bi bi-file-earmark"></i>
-          <span>Mata Pelajaran</span>
-        </a>
-      </li><!-- End Mata Pelajaran Page Nav -->
-
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -149,7 +122,7 @@
 
   <!-- Template Main JS File -->
   <script src="<?= base_url('assets/js/main.js'); ?>"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 
 </html>
