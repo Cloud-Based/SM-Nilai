@@ -12,9 +12,10 @@
 
         public function index() {
             $id = "gu8035";
-            $data['dataNilaiMurid'] = $this->M_murid->readNilaiMurid()->result();
+            $data['dataMurid'] = $this->M_murid->readMurid()->result();
             $data['dataMapel'] = $this->M_mapel->readMapel()->result();
             $data['dataMapelByIdGuru'] = $this->M_guru->readMapelByIdGuru($id)->result();
+            $data['dataNilaiMapel'] = $this->M_murid->readNilaiMurid()->result();
             $this->template->load('guru/view/v_guru', 'guru/dashboard', $data);
         }
 

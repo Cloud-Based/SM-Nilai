@@ -13,11 +13,11 @@ class M_murid extends CI_Model {
   }
 
   public function readNilaiMurid() {
-    $q = $this->db->query('SELECT tb_murid.id as id_murid, tb_murid.nisn, tb_murid.nama_murid, tb_mapel.id as id_mapel, tb_nilai.id as id_nilai, tb_nilai.nilai as nilai
+    $q = $this->db->query('SELECT tb_murid.id as id_murid, tb_murid.nisn, tb_murid.nama_murid, tb_mapel.id as id_mapel, tb_mapel.mata_pelajaran, tb_nilai.id as id_nilai, tb_nilai.nilai as nilai
     FROM tb_murid JOIN tb_nilai
     ON tb_murid.id = tb_nilai.id_murid JOIN tb_mapel
     ON tb_nilai.id_mapel = tb_mapel.id
-    WHERE tb_nilai.id_murid = tb_murid.id');
+    WHERE tb_nilai.id_mapel = tb_mapel.id');
 
     return $q;
   }
