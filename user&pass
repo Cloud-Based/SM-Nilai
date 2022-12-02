@@ -1,2 +1,11 @@
+// Admin
 username = jobs
+password = 12345
+
+//Guru
+username = steve, mandasa
+password = 12345
+
+//Murid
+username = charlie, mandasa, renita
 password = 12345
