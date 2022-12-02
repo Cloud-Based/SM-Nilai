@@ -6,14 +6,21 @@
         {
           parent::__construct();
           $this->load->model('M_guru');
+          $this->load->model('M_login');
         }
 
         public function index() {
+            $id = $this->session->userdata('id');
+            $data['admin'] = $this->M_login->get_id($id);
+            $data['role'] = $this->M_login->get_role($id);
             $data['dataGuru'] = $this->M_guru->readGuru()->result();
             $this->template->load('admin/view/v_admin', 'admin/guru/table_guru', $data);
         }
 
         public function formAdd() {
+            $id = $this->session->userdata('id');
+            $data['admin'] = $this->M_login->get_id($id);
+            $data['role'] = $this->M_login->get_role($id);
             $this->template->load('admin/view/v_admin', 'admin/guru/form_add');
         }
         

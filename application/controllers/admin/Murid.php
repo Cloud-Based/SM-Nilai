@@ -6,14 +6,21 @@
         {
           parent::__construct();
           $this->load->model('M_murid');
+          $this->load->model('M_login');
         }
 
         public function index() {
+            $id = $this->session->userdata('id');
+            $data['admin'] = $this->M_login->get_id($id);
+            $data['role'] = $this->M_login->get_role($id);
             $data['dataMurid'] = $this->M_murid->readMurid()->result();
             $this->template->load('admin/view/v_admin', 'admin/murid/table_murid', $data);
         }
 
         public function formAdd() {
+            $id = $this->session->userdata('id');
+            $data['admin'] = $this->M_login->get_id($id);
+            $data['role'] = $this->M_login->get_role($id);
             $this->template->load('admin/view/v_admin', 'admin/murid/form_add');
         }
         
